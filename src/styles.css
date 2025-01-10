@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-background);
+    font-family: Roboto, monospace, sans-serif;
+}
+
+:root{
+    --primary-background: #eee;
+    --secondary-background: #ffffff;
+    --font-color: #000000;
+    --highlight-color: #B24BF3;
+    --spacing-unit: 1rem; /* 1rem = 16px */
+    --heading-text-size: 3rem;
+    --body-text-size: 2rem;
+    --info-text-size: 1rem;
+}
+
+/* Overall page layout */
+.site-container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "navbar"
+    "main"
+    "footer";
+}
+
+/* Sticky Navbar */
+header {
+    position: sticky;
+    top: 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+  }
+
+nav a{
+    margin: 0 20px;
+    text-decoration: none;
+    color: var(--font-color);
+}
+.nav-background{
+    padding: 20px 50px;
+    border-radius: 30px;
+    background-color: var(--secondary-background);
+}
+
+main{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    height: 100vh;
+    border: 1px solid red;
+}
+
+.content-heading{
+    font-size: var(--heading-text-size);
+    margin-bottom: 5rem;
+    color: var(--font-color);
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: var(--primary-background);
+    color: var(--font);  
+    font-size: var(--info-text-size); 
+    font-weight: 500;
+    height: 4rem;
+    border: 1px solid blue;
+}
+
+.fa-github {
+    font-size: 24px;
+    color: black;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .fa-github:hover {
+    transform:scale(1.3);
+  }
